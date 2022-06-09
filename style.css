@@ -3,3 +3,53 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --grid-row: 13;
+  --grid-col: 13;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: lightgray;
+}
+
+.container {
+  width: min(85%, 690px);
+}
+
+#output {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-col), 1fr);
+  grid-template-rows: repeat(var(--grid-row), 1fr);
+}
+
+.grid-item {
+  /* padding: calc(45.53px / 2); */
+  background-color: white;
+  transition: all 200ms ease;
+}
+
+button {
+  border: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  border-radius: 999px;
+  padding: 0.5rem 2rem;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  background-color: transparent;
+  color: red;
+  border-color: red;
+}
